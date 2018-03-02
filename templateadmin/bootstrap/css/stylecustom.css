@@ -1,0 +1,9 @@
+.login-page, .register-page {
+    background: #2277e0;
+}
+.login-logo a, .register-logo a {
+    color: #fff !important;
+}
+a {
+	color:#eee;
+}

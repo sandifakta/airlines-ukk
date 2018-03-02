@@ -1,293 +1,404 @@
-<!--
-	Author: W3layouts
-	Author URL: http://w3layouts.com
-	License: Creative Commons Attribution 3.0 Unported
-	License URL: http://creativecommons.org/licenses/by/3.0/
--->
 
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Jual Tiket Garuda Indonesia</title>
-	<link rel="stylesheet" href="<?php echo base_url() ?>assets/css/style.css">
-	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-	<link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="Flight Ticket Booking  Widget Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
-	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>FlyTravel</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FREEHTML5.CO" />
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
 
-</head>
-<body>
-	<h1>Flight Ticket Booking</h1>
-	<div class="main-agileinfo">
-		<div class="sap_tabs">			
-			<div id="horizontalTab">
-				<ul class="resp-tabs-list">
-					<li class="resp-tab-item"><span>Pemesanan</span></li>
-					<li class="resp-tab-item"><span>Sejalur</span></li>
-					<li class="resp-tab-item"><span>Pulang Pergi</span></li>				
-				</ul>	
-				<div class="clearfix"> </div>	
-				<div class="resp-tabs-container">
-					<div class="tab-1 resp-tab-content roundtrip">
-						<form action="#" method="post">
-							<div class="from">
-								<h3>Dari</h3>
-								<input type="text" name="city" class="city1" placeholder="Type Departure City" required="">
-							</div>
-							<div class="to">
-								<h3>Ke</h3>
-								<input type="text" name="city" class="city2" placeholder="Type Destination City" required="">
-							</div>
-							<div class="clear"></div>
-							<div class="date">
-								<div class="depart">
-									<h3>Depart</h3>
-									<input  id="datepicker" name="Text" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
-									<span class="checkbox1">
-										<label class="checkbox"><input type="checkbox" name="" checked=""><i> </i>Flexible with date</label>
-									</span>
-								</div>
-								<div class="return">
-									<h3>Return</h3>
-									<input  id="datepicker1" name="Text" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
-									<span class="checkbox1">
-										<label class="checkbox"><input type="checkbox" name="" checked=""><i> </i>Flexible with date</label>
-									</span>
-								</div>
-								<div class="clear"></div>
-							</div>
-							<div class="class">
-								<h3>Class</h3>
-								<select id="w3_country1" onchange="change_country(this.value)" class="frm-field required">
-									<option value="null">Economy</option>  
-									<option value="null">Premium Economy</option>   
-									<option value="null">Business</option>   
-									<option value="null">First class</option>   						
-								</select>
-							</div>
-							<div class="clear"></div>
-							<div class="numofppl">
-								<div class="adults">
-									<h3>Adult:(12+ yrs)</h3>
-									<div class="quantity"> 
-										<div class="quantity-select">                           
-											<div class="entry value-minus">&nbsp;</div>
-											<div class="entry value"><span>1</span></div>
-											<div class="entry value-plus active">&nbsp;</div>
-										</div>
-									</div>
-								</div>
-								<div class="child">
-									<h3>Child:(2-11 yrs)</h3>
-									<div class="quantity"> 
-										<div class="quantity-select">                           
-											<div class="entry value-minus">&nbsp;</div>
-											<div class="entry value"><span>1</span></div>
-											<div class="entry value-plus active">&nbsp;</div>
-										</div>
-									</div>
-								</div>
-								<div class="clear"></div>
-							</div>
-							<div class="clear"></div>
-							<input type="submit" value="Search Flights">
-						</form>						
-					</div>		
-					<div class="tab-1 resp-tab-content oneway">
-						<!-- Form ini yang dipakai dulu, Okay -->
-						<form action="<?php echo base_url('insert/tambah_aksi'); ?>" method="post">
-							<div class="from">
-								<h3>Tempat Asal</h3>
-								<input type="text" name="from" placeholder="Ketik Kota Asal" required="true" />
-							</div>
-							<div class="to">
-								<h3>Tempat Tujuan</h3>
-								<input type="text" name="to" placeholder="Ketik Kota Tujuan" required="true">
-							</div>
-							<div class="clear"></div>
-							<div class="date">
-								<div class="depart">
-									<h3>Keberangkatan</h3>
-									<input class="date" id="datepicker2" name="depart" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="true">
-									<span class="checkbox1">
-										<label class="checkbox"><input type="checkbox" name="" checked=""><i> </i>Flexible with date</label>
-									</span>
-								</div>
-								
-							</div>
-							<div class="class">
-								<h3>Harga</h3>
-								<select id="w3_country1" name="prices" onchange="change_country(this.value)" class="frm-field required">
-									<option value="125000">Rp125.000,00</option>  
-									<option value="130000">Rp130.000,00</option>   
-									<option value="225000">Rp225.000,00</option>   
-									<option value="330000">Rp330.000,00</option>   						
-								</select>
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
 
-							</div>
-							<div class="clear"></div>
-							<input type="submit" value="Pencarian">
-						</form>	
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/animate.css')?>">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/icomoon.css')?>">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.css')?>">
+	<!-- Superfish -->
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/superfish.css')?>">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/magnific-popup.css')?>">
+	<!-- Date Picker -->
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap-datepicker.min.css')?>">
+	<!-- CS Select -->
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/cs-select.css')?>">
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/cs-skin-border.css')?>">
+	
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/style.css')?>">
 
-					</div>
-					<div class="tab-1 resp-tab-content multicity">
-						
-						<form action="#" method="post">
-							<div class="from">
-								<h3>From</h3>
-								<input type="text" name="city" class="city1" placeholder="Type Departure City" required="">
-							</div>
-							<div class="to">
-								<h3>To</h3>
-								<input type="text" name="city" class="city2" placeholder="Type Destination City" required="">
-							</div>
-							<div class="clear"></div>
-							<div class="date">
-								<div class="depart">
-									<h3>Depart</h3>
-									<input class="date" id="datepicker3" name="Text" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
-									<span class="checkbox1">
-										<label class="checkbox"><input type="checkbox" name="" checked=""><i> </i>Flexible with date</label>
-									</span>
-								</div>
-							</div>
-							<div class="class">
-								<h3>Class</h3>
-								<select id="w3_country1" onchange="change_country(this.value)" class="frm-field required">
-									<option value="null">Economy</option>  
-									<option value="null">Premium Economy</option>   
-									<option value="null">Business</option>   
-									<option value="null">First class</option>   						
-								</select>
-							</div>
-							<div class="clear"></div>
-							<div id="loadMore">Add City+</div>
-							<div id="showLess">Remove</div>
-						</form>
-						<div class="load_more">	
-							<ul id="myList">
-								<li>
 
-									<div class="l_g spcl">
-										<form action="#" method="post" class="blackbg">
-											<div class="from">
-												<h3>From</h3>
-												<input type="text" name="city" class="city1" placeholder="Type Departure City" required="">
+	<!-- Modernizr JS -->
+	<script src="<?php echo base_url('assets/js/modernizr-2.6.2.min.js')?>"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+		<div id="ticktravel-wrapper">
+		<div id="ticktravel-page">
+
+		<header id="ticktravel-header-section" class="sticky-banner">
+			<div class="container">
+				<div class="nav-header">
+					<a href="#" class="js-ticktravel-nav-toggle ticktravel-nav-toggle dark"><i></i></a>
+					<h1 id="ticktravel-logo"><a href="#"><i class="icon-airplane"></i>sandi Travel</a></h1>
+					<!-- START #ticktravel-menu-wrap -->
+					
+					<nav id="ticktravel-menu-wrap" role="navigation">
+						<ul class="sf-menu" id="ticktravel-primary-menu">
+							<li class="active"><a href="#">Home</a></li>
+							<li><a href="login">login</a></li>
+							<li><a href="action/daftar">sign up</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+		<!-- end:header-top -->
+	
+		<div class="ticktravel-hero">
+			<div class="ticktravel-overlay"></div>
+			<div class="ticktravel-cover" data-stellar-background-ratio="0.5" style="background-image: url(images/cover_bg_1.jpg);">
+				<div class="desc">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-5 col-md-5">
+								<div class="tabulation animate-box">
+
+								  <!-- Nav tabs -->
+								   <ul class="nav nav-tabs" role="tablist">
+								      <li role="presentation" class="active">
+								      	<a href="#flights" aria-controls="flights" role="tab" data-toggle="tab">Flights</a>
+								   </ul>
+
+								   <!-- Tab panes -->
+									<div class="tab-content">
+									 <div role="tabpanel" class="tab-pane active" id="flights">
+									 	<form action="<?php echo base_url('Search/cari_rute'); ?>">
+										<div class="row">
+											<!-- <div class="col-xxs-12 col-xs-6 mt">
+												<div class="input-field">
+													<label for="from">Dari</label>
+													<input name="rute_from" type="text" class="form-control" id="from-place" placeholder="Semarang, Jawa tengah"/>
+												</div>
+											</div> -->
+
+											<div class="col-xxs-12 col-xs-6 mt">
+												<section>
+													<label for="class">Dari</label>
+													<select class="cs-select cs-skin-border" name="rute_from">
+														<option value="jakarta" selected>jakarta</option>
+														<option value="Yogyakarta">Yogyakarta</option>
+														<option value="bali">bali</option>
+														<option value="makasar">Makasar</option>
+														<option value="solo">Solo</option>
+														<option value="palembang">palembang</option>
+													</select>
+												</section>
 											</div>
-											<div class="to">
-												<h3>To</h3>
-												<input type="text" name="city" class="city2" placeholder="Type Destination City" required="">
+
+											
+
+											<!-- <div class="col-xxs-12 col-xs-6 mt">
+												<div class="input-field">
+													<label for="from">Ke</label>
+													<input name="rute_to" type="text" class="form-control" id="to-place" placeholder="Bandung, Jawa barat"/>
+												</div>
+											</div> -->
+
+
+											<div class="col-xxs-12 col-xs-6 mt">
+												<section>
+													<label for="class">Ke</label>
+													<select class="cs-select cs-skin-border" name="rute_to">
+														<option value="makasar" selected>Makasar</option>
+														<option value="jakarta">Jakarta</option>
+														<option value="Yogyakarta">Yogyakarta</option>
+														<option value="bali">bali</option>
+														<option value="solo">Solo</option>
+														<option value="palembang">palembang</option>
+													</select>
+												</section>
 											</div>
-											<div class="clear"></div>
-											<div class="date">
-												<div class="depart">
-													<h3>Depart</h3>
-													<input class="date" id="datepicker" name="Text" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
-													<span class="checkbox1">
-														<label class="checkbox"><input type="checkbox" name="" checked=""><i> </i>Flexible with date</label>
-													</span>
+
+											<div class="col-xxs-12 col-xs-6 mt">
+												<div class="input-field">
+													<label for="from">pergi</label>
+													<input name="depart_at" type="date" class="form-control" id="to-place">
 												</div>
 											</div>
-											<div class="clear"></div>
-										</form>
-
-									</div>
-
-								</li>
-								<form action="#" method="post">
-									<div class="numofppl">
-										<div class="adults">
-											<h3>Adult:(12+ yrs)</h3>
-											<div class="quantity"> 
-												<div class="quantity-select">                           
-													<div class="entry value-minus">&nbsp;</div>
-													<div class="entry value"><span>1</span></div>
-													<div class="entry value-plus active">&nbsp;</div>
+										<!-- 	<div class="col-xxs-12 col-xs-12 mt alternate">
+												<div class="input-field">
+													<label for="date-start">Pergi</label>
+													<input name="depart_at" type="date" class="form-control" id="date-start" placeholder="mm/dd/yyyy"/>
 												</div>
+											</div> -->
+											<!-- <div class="col-xxs-12 col-xs-6 mt alternate">
+												<div class="input-field">
+													<label for="date-end">Pulang</label>
+													<input type="text" class="form-control" id="date-end" placeholder="mm/dd/yyyy"/>
+												</div>
+											</div> -->
+											<!-- <div class="col-sm-12 mt">
+												<section>
+													<label for="class">Class</label>
+													<select class="cs-select cs-skin-border">
+														<option value="" disabled selected>Economy</option>
+														<option value="economy">Economy</option>
+														<option value="first">First</option>
+														<option value="business">Business</option>
+													</select>
+												</section>
+											</div> -->
+											<div class="col-xxs-12 col-xs-12 mt">
+												<section>
+													<label for="class">kelas</label>
+													<select class="cs-select cs-skin-border" name="class">
+														<option value="Ekonomi" selected>Ekonomi</option>
+														<option value="first">First class</option>
+													</select>
+												</section>
+											</div>
+
+											<div class="col-xxs-12 col-xs-12 mt">
+												<section>
+													<label for="class">Jumlah penumpang</label>
+													<input type="number" min="1" name="jml" value="1" class="form-control">
+												</section>
+											</div>
+											<div class="col-xs-12">
+												<input type="submit" class="btn btn-primary btn-block" value="Search Flight">
 											</div>
 										</div>
-										<div class="child">
-											<h3>Child:(2-11 yrs)</h3>
-											<div class="quantity"> 
-												<div class="quantity-select">                           
-													<div class="entry value-minus">&nbsp;</div>
-													<div class="entry value"><span>1</span></div>
-													<div class="entry value-plus active">&nbsp;</div>
-												</div>
-											</div>
-										</div>
-										<div class="clear"></div>
+									</form>
+									 </div>
+
+
+					
 									</div>
-									<div class="clear"></div>
-									<input type="submit" value="Search Flights">
-								</form>
-							</ul>
+
+								</div>
+							</div>
+							<div class="desc2 animate-box">
+								<div class="col-sm-7 col-sm-push-1 col-md-7 col-md-push-1">
+									<p>Tickeristic travel <a href="<?php echo base_url('') ?>" class="ticktravel-site-name">Register now</a></p>
+									<h2>Pesan tiket penerbangan lokal di sini</h2>
+									<h3>Terbang dari Jakarta, Bali, Yogyakarta, dll.</h3>
+									<!-- <p><a class="btn btn-primary btn-lg" href="#">Get Started</a></p> -->
+								</div>
+							</div>
 						</div>
 					</div>
+				</div>
+			</div>
 
-				</div>						
+		</div>
+		
+		<div id="ticktravel-tours" class="ticktravel-section-gray">
+			<div class="container">
+
+					<div class="col-md-4 col-sm-6 ticktravel-tours animate-box" data-animate-effect="fadeIn">
+						<div href="#"><img src="<?php echo base_url('assets/images/travel.jpeg')?>" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
+								<div class="desc">
+								<span></span>
+								<h3>Hongkong</h3>
+								<span>2 nights + Flight 4*Hotel</span>
+								<span class="price">$1,000</span>
+								<a class="btn btn-primary" href="#">pesan sekarang <i class="icon-arrow-right22"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 ticktravel-tours animate-box" data-animate-effect="fadeIn">
+						<div href="#"><img src="<?php echo base_url('assets/images/place-3.jpg')?>" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
+							<div class="desc">
+								<span></span>
+								<h3>Hongkong</h3>
+								<span>2 nights + Flight 4*Hotel</span>
+								<span class="price">$1,000</span>
+								<a class="btn btn-primary" href="#">Book Now <i class="icon-arrow-right22"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12 text-center animate-box">
+						<p><a class="btn btn-primary btn-outline btn-lg" href="#">See All Offers <i class="icon-arrow-right22"></i></a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- ticktravel-blog-section -->
+		<div id="ticktravel-testimonial" style="background-image:url(images/img_bg_1.jpg);">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center ticktravel-heading">
+					<h2>Happy Clients</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="box-testimony animate-box">
+						<blockquote>
+							<span class="quote"><span><i class="icon-quotes-right"></i></span></span>
+							<p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
+						</blockquote>
+						<p class="author">John Doe, CEO <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> <span class="subtext">Creative Director</span></p>
+					</div>
+					
+				</div>
+				<div class="col-md-4">
+					<div class="box-testimony animate-box">
+						<blockquote>
+							<span class="quote"><span><i class="icon-quotes-right"></i></span></span>
+							<p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.&rdquo;</p>
+						</blockquote>
+						<p class="author">John Doe, CEO <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> <span class="subtext">Creative Director</span></p>
+					</div>
+					
+					
+				</div>
+				<div class="col-md-4">
+					<div class="box-testimony animate-box">
+						<blockquote>
+							<span class="quote"><span><i class="icon-quotes-right"></i></span></span>
+							<p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
+						</blockquote>
+						<p class="author">John Doe, Founder <a href="#">FREEHTML5.co</a> <span class="subtext">Creative Director</span></p>
+					</div>
+					
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="footer-w3l">
-		<p class="agileinfo"> &copy; 2016 Flight Ticket Booking . All Rights Reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+		<footer>
+			<div id="footer">
+				<div class="container">
+					<div class="row row-bottom-padded-md">
+						<div class="col-md-2 col-sm-2 col-xs-12 ticktravel-footer-link">
+							<h3>About Travel</h3>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						</div>
+						<div class="col-md-2 col-sm-2 col-xs-12 ticktravel-footer-link">
+							<h3>Top Flights Routes</h3>
+							<ul>
+								<li><a href="#">Manila flights</a></li>
+								<li><a href="#">Dubai flights</a></li>
+								<li><a href="#">Bangkok flights</a></li>
+								<li><a href="#">Tokyo Flight</a></li>
+								<li><a href="#">New York Flights</a></li>
+							</ul>
+						</div>
+						<div class="col-md-2 col-sm-2 col-xs-12 ticktravel-footer-link">
+							<h3>Top Hotels</h3>
+							<ul>
+								<li><a href="#">Boracay Hotel</a></li>
+								<li><a href="#">Dubai Hotel</a></li>
+								<li><a href="#">Singapore Hotel</a></li>
+								<li><a href="#">Manila Hotel</a></li>
+							</ul>
+						</div>
+						<div class="col-md-2 col-sm-2 col-xs-12 ticktravel-footer-link">
+							<h3>Interest</h3>
+							<ul>
+								<li><a href="#">Beaches</a></li>
+								<li><a href="#">Family Travel</a></li>
+								<li><a href="#">Budget Travel</a></li>
+								<li><a href="#">Food &amp; Drink</a></li>
+								<li><a href="#">Honeymoon and Romance</a></li>
+							</ul>
+						</div>
+						<div class="col-md-2 col-sm-2 col-xs-12 ticktravel-footer-link">
+							<h3>Best Places</h3>
+							<ul>
+								<li><a href="#">Boracay Beach</a></li>
+								<li><a href="#">Dubai</a></li>
+								<li><a href="#">Singapore</a></li>
+								<li><a href="#">Hongkong</a></li>
+							</ul>
+						</div>
+						<div class="col-md-2 col-sm-2 col-xs-12 ticktravel-footer-link">
+							<h3>Affordable</h3>
+							<ul>
+								<li><a href="#">Food &amp; Drink</a></li>
+								<li><a href="#">Fare Flights</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 text-center">
+							<p class="ticktravel-social-icons">
+								<a href="#"><i class="icon-twitter2"></i></a>
+								<a href="#"><i class="icon-facebook2"></i></a>
+								<a href="#"><i class="icon-instagram"></i></a>
+								<a href="#"><i class="icon-dribbble2"></i></a>
+								<a href="#"><i class="icon-youtube"></i></a>
+							</p>
+							<p>Copyright 2016 Free Html5 <a href="#">Module</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://freehtml5.co/" target="_blank">Freehtml5.co</a> / Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	
+
 	</div>
-	<!--script for portfolio-->
-	<script src="<?php echo base_url() ?>assets/js/jquery.min.js"> </script>
-	<script src="<?php echo base_url() ?>assets/js/easyResponsiveTabs.js" type="text/javascript"></script>
-	<script type="text/javascript">
-		$(document).ready(function () {
-			$('#horizontalTab').easyResponsiveTabs({
-					type: 'default', //Types: default, vertical, accordion           
-					width: 'auto', //auto or any width like 600px
-					fit: true   // 100% fit in a container
-				});
-		});		
-	</script>
-	<!--//script for portfolio-->
-	<!-- Calendar -->
-	<link rel="stylesheet" href="<?php echo base_url() ?>assets/css/jquery-ui.css" />
-	<script src="<?php echo base_url() ?>assets/js/jquery-ui.js"></script>
-	<script>
-		$(function() {
-			$( "#datepicker,#datepicker1,#datepicker2,#datepicker3" ).datepicker();
-		});
-	</script>
-	<!-- //Calendar -->
-	<!--quantity-->
-	<script>
-		$('.value-plus').on('click', function(){
-			var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)+1;
-			divUpd.text(newVal);
-		});
+	<!-- END ticktravel-page -->
 
-		$('.value-minus').on('click', function(){
-			var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)-1;
-			if(newVal>=1) divUpd.text(newVal);
-		});
-	</script>
-	<!--//quantity-->
-	<!--load more-->
-	<script>
-		$(document).ready(function () {
-			size_li = $("#myList li").size();
-			x=1;
-			$('#myList li:lt('+x+')').show();
-			$('#loadMore').click(function () {
-				x= (x+1 <= size_li) ? x+1 : size_li;
-				$('#myList li:lt('+x+')').show();
-			});
-			$('#showLess').click(function () {
-				x=(x-1<0) ? 1 : x-1;
-				$('#myList li').not(':lt('+x+')').hide();
-			});
-		});
-	</script>
-	<!-- //load-more -->
+	</div>
+	<!-- END ticktravel-wrapper -->
+
+	<!-- jQuery -->
 
 
+	<script src="<?php echo base_url('assets/js/jquery.min.js')?>"></script>
+	<!-- jQuery Easing -->
+	<script src="<?php echo base_url('assets/js/jquery.easing.1.3.js')?>"></script>
+	<!-- Bootstrap -->
+	<script src="<?php echo base_url('assets/js/bootstrap.min.js')?>"></script>
+	<!-- Waypoints -->
+	<script src="<?php echo base_url('assets/js/jquery.waypoints.min.js')?>"></script>
+	<script src="<?php echo base_url('assets/js/sticky.js')?>"></script>
 
-</body>
+	<!-- Stellar -->
+	<script src="<?php echo base_url('assets/js/jquery.stellar.min.js')?>"></script>
+	<!-- Superfish -->
+	<script src="<?php echo base_url('assets/js/hoverIntent.js')?>"></script>
+	<script src="<?php echo base_url('assets/js/superfish.js')?>"></script>
+	<!-- Magnific Popup -->
+	<script src="<?php echo base_url('assets/js/jquery.magnific-popup.min.js')?>"></script>
+	<script src="<?php echo base_url('assets/js/js/magnific-popup-options.js')?>"></script>
+	<!-- Date Picker -->
+	<script src="<?php echo base_url('assets/js/bootstrap-datepicker.min.js')?>"></script>
+	<!-- CS Select -->
+	<script src="<?php echo base_url('assets/js/classie.js')?>"></script>
+	<script src="<?php echo base_url('assets/js/selectFx.js')?>"></script>
+	
+	<!-- Main JS -->
+	<script src="<?php echo base_url('assets/js/main.js')?>"></script>
+
+	</body>
 </html>
+

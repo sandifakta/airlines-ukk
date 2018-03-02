@@ -1,0 +1,11 @@
+.login-page, .register-page {
+    background: #2277e0;
+    background-image: url(http://localhost/booktravel/assets/images/jakarta.jpg);
+    /*background-position: center;*/  
+}
+.login-logo a, .register-logo a {
+    color: #fff !important;
+}
+a {
+	color:#eee;
+}

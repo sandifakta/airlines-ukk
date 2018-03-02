@@ -1,574 +1,1985 @@
-/*--
-	Author: W3layouts
-	Author URL: http://w3layouts.com
-	License: Creative Commons Attribution 3.0 Unported
-	License URL: http://creativecommons.org/licenses/by/3.0/
---*/
-
-/*-- Reset-Code --*/
-	html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
-	article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
-	ol,ul{list-style:none;margin:0px;padding:0px;}
-	blockquote,q{quotes:none;}
-	blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
-	table{border-collapse:collapse;border-spacing:0;}
-	/* start editing from here */
-	a{text-decoration:none;}
-	.txt-rt{text-align:right;}/* text align right */
-	.txt-lt{text-align:left;}/* text align left */
-	.txt-center{text-align:center;}/* text align center */
-	.float-rt{float:right;}/* float right */
-	.float-lt{float:left;}/* float left */
-	.clear{clear:both;}/* clear float */
-	.pos-relative{position:relative;}/* Position Relative */
-	.pos-absolute{position:absolute;}/* Position Absolute */
-	.vertical-base{vertical-align:baseline;}/* vertical align baseline */
-	.vertical-top{vertical-align:top;}/* vertical align top */
-	nav.vertical ul li{display:block;}/* vertical menu */
-	nav.horizontal ul li{display: inline-block;}/* horizontal menu */
-	img{max-width:100%;}
-/*-- //Reset-Code --*/
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon/icomoon.eot?srf3rx");
+  src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* =======================================================
+*
+* 	Template Style 
+*	Edit this section
+*
+* ======================================================= */
 body {
-	background:url('../images/1.jpg') no-repeat 0px 0px;
-	background-size: cover;
-	font-family: 'Open Sans', sans-serif;
-	background-attachment: fixed;
-    background-position: center;
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
+  background: #fff;
+  color: #848484;
+  font-weight: 300;
+  overflow-x: hidden;
 }
-h1,h2,h3,h4,h5,h6{
-	font-family: 'Montserrat', sans-serif;
-	
-}
-h1{
-	color:#fff;
-	font-size:50px;
-	margin-top:50px;
-	text-align:center;
-}
-.main-agileinfo{
-	margin:50px auto;
-	width:50%;
-}
-/*--SAP--*/
-.sap_tabs{
-	clear:both;
-	padding: 0;
-}
-.tab_box{
-	background:#fd926d;
-	padding: 2em;
-}
-.top1{
-	margin-top: 2%;
-}
-.resp-tabs-list {
-    list-style: none;
-    padding: 15px 0px;
-    margin: 0 auto;
-    text-align: center;
-	background: #130f40;
-}
-.resp-tab-item {
-    font-size: 1.1em;
-    font-weight: 500;
-    cursor: pointer;
-    display: inline-block;
-    margin: 0;
-    text-align: center;
-    list-style: none;
-    outline: none;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-    text-transform: uppercase;
-    margin: 0 1.2em 0;
-	color:#b1b1b1;
-	padding:7px 15px;
+body.ticktravel-offcanvas {
+  overflow: hidden;
 }
 
-.resp-tab-active {
-	color:#fff;	
+.form{
+  padding-top: 60vw;
 }
-.resp-tabs-container {
-	padding: 0px;
-	clear: left;	
+
+
+a {
+  color: #2277e0;
+  -webkit-transition: 0.5s, ease;
+  -o-transition: 0.5s, ease;
+  transition: 0.5s, ease;
 }
-h2.resp-accordion {
-	cursor: pointer;
-	padding: 5px;
-	display: none;
+a:hover {
+  text-decoration: none;
+  color: #2277e0;
 }
-.resp-tab-content {
-	display: none;
+
+p, ul, ol {
+  margin-bottom: 1.5em;
+  font-size: 16px;
+  color: #848484;
+  font-family: "Open Sans", Arial, sans-serif;
 }
-.resp-content-active, .resp-accordion-active {
-   display: block;
+
+h1, h2, h3, h4, h5, h6 {
+  color: #5a5a5a;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 400;
+  margin: 0 0 30px 0;
 }
-form {
-    background:rgba(3, 3, 3, 0.57);
-    padding: 25px;
+
+figure {
+  margin-bottom: 2em;
 }
-h3 {
-    font-size: 16px;
-    color:#fff;
-    margin-bottom: 7px;
+
+::-webkit-selection {
+  color: #fcfcfc;
+  background: #2277e0;
 }
-.from,.to,.date,.depart,.return{
-	width:48%;
-	float:left;
+
+::-moz-selection {
+  color: #fcfcfc;
+  background: #292e34;
 }
-.from,.to,.date{
-	margin-bottom:40px;
+
+::selection {
+  color: #fcfcfc;
+  background: #2277e0;
 }
-.from,.date,.depart{
-	margin-right:4%;
+
+#ticktravel-header {
+  position: relative;
+  margin-bottom: 0;
+  z-index: 9999999;
 }
-input[type="text"]{
-	padding:10px;
-	width:93%;
-	float:left;
+
+.stuck {
+  position: fixed !important;
+  top: 0 !important;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+  -ms-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+  -o-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
 }
-input#datepicker,input#datepicker1,input#datepicker2,input#datepicker3 {
-    width: 85%;
-	margin-bottom:10px;
+
+.header-top {
+  padding: 10px 0;
+  background: #2277e0;
 }
-select#w3_country1 {
-    padding: 10px;
-	float:left;
+.header-top .ticktravel-link a {
+  margin-left: 10px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
 }
-label.checkbox {
-  display: inline-block;
+.header-top .ticktravel-link a:first-child {
+  margin-left: 0;
 }
-.checkbox {
-    position: relative;
-    font-size: 0.95em;
+.header-top .ticktravel-link a:hover {
+  color: white !important;
+}
+@media screen and (max-width: 768px) {
+  .header-top .ticktravel-link {
+    text-align: center;
+  }
+}
+.header-top .ticktravel-social a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  margin-right: 15px;
+  position: relative;
+  -webkit-transition: 0.5s, ease-in-out;
+  -o-transition: 0.5s, ease-in-out;
+  transition: 0.5s, ease-in-out;
+}
+.header-top .ticktravel-social a:last-child {
+  margin-right: 0;
+}
+.header-top .ticktravel-social a:hover, .header-top .ticktravel-social a:focus, .header-top .ticktravel-social a:active {
+  text-decoration: none;
+  color: white !important;
+}
+.header-top .ticktravel-social a:hover i, .header-top .ticktravel-social a:focus i, .header-top .ticktravel-social a:active i {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+@media screen and (max-width: 768px) {
+  .header-top .ticktravel-social {
+    text-align: center !important;
+  }
+}
+
+.ticktravel-cover,
+.ticktravel-hero {
+  position: relative;
+  height: 800px;
+}
+@media screen and (max-width: 768px) {
+  .ticktravel-cover,
+  .ticktravel-hero {
+    height: 700px;
+  }
+}
+.ticktravel-cover .ticktravel-overlay,
+.ticktravel-hero .ticktravel-overlay {
+  position: absolute !important;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  background-color: #292e34;
+  background-image: url(http://localhost/booktravel/assets/images);
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+  background-color: #2277e0;
+}
+
+.ticktravel-cover {
+  background-size: cover;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .ticktravel-cover {
+    heifght: inherit;
+    padding: 3em 0;
+  }
+}
+.ticktravel-cover .btn {
+  padding: 1em 2em;
+  opacity: .9;
+}
+.ticktravel-cover.ticktravel-cover_2 {
+  height: 600px;
+}
+@media screen and (max-width: 768px) {
+  .ticktravel-cover.ticktravel-cover_2 {
+    heifght: inherit;
+    padding: 3em 0;
+  }
+}
+.ticktravel-cover .desc {
+  top: 40%;
+  position: absolute;
+  width: 100%;
+  margin-top: -80px;
+  z-index: 2;
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .ticktravel-cover .desc {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.ticktravel-cover .desc h2 {
+  color: #fff;
+  font-size: 60px;
+  margin-bottom: 10px;
+  font-weight: 400 !important;
+}
+@media screen and (max-width: 768px) {
+  .ticktravel-cover .desc h2 {
+    font-size: 40px;
+  }
+}
+.ticktravel-cover .desc h3 {
+  color: #fff;
+}
+.ticktravel-cover .desc p {
+  display: block;
+  margin-bottom: 30px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.ticktravel-cover .desc p a {
+  color: #fff;
+}
+.ticktravel-cover .desc p a:hover, .ticktravel-cover .desc p a:focus {
+  color: #fff !important;
+}
+.ticktravel-cover .desc p a:hover.btn, .ticktravel-cover .desc p a:focus.btn {
+  border: 2px solid #fff !important;
+  background: transparent !important;
+}
+.ticktravel-cover .desc p a.ticktravel-site-name {
+  padding-bottom: 2px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}
+.ticktravel-cover .desc .price {
+  font-size: 60px;
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .ticktravel-cover .desc .desc2 {
+    display: none;
+  }
+}
+
+/* Superfish Override Menu */
+.sf-menu {
+  margin: 7px 0 0 0 !important;
+}
+
+.sf-menu {
+  float: right;
+}
+
+.sf-menu ul {
+  box-shadow: none;
+  border: transparent;
+  min-width: 12em;
+  *width: 12em;
+}
+
+.sf-menu a {
+  color: rgba(0, 0, 0, 0.5);
+  padding: 0.75em 1em !important;
+  font-weight: normal;
+  border-left: none;
+  border-top: none;
+  border-top: none;
+  text-decoration: none;
+  zoom: 1;
+  font-size: 16px;
+  border-bottom: none !important;
+  font-weight: bold;
+}
+.sf-menu a:hover, .sf-menu a:focus {
+  color: #2277e0 !important;
+}
+
+.sf-menu li.active a:hover, .sf-menu li.active a:focus {
+  color: #2277e0;
+}
+
+.sf-menu li,
+.sf-menu ul li,
+.sf-menu ul ul li,
+.sf-menu li:hover,
+.sf-menu li.sfHover {
+  background: transparent;
+}
+
+.sf-menu ul li a,
+.sf-menu ul ul li a {
+  text-transform: none;
+  padding: 0.2em 1em !important;
+  letter-spacing: 1px;
+  font-size: 14px !important;
+}
+
+.sf-menu li:hover a,
+.sf-menu li.sfHover a,
+.sf-menu ul li:hover a,
+.sf-menu ul li.sfHover a,
+.sf-menu li.active a {
+  color: #2277e0;
+}
+
+.sf-menu ul li:hover,
+.sf-menu ul li.sfHover {
+  background: transparent;
+}
+
+.sf-menu ul li {
+  background: transparent;
+}
+
+.sf-arrows .sf-with-ul {
+  padding-right: 2.5em;
+  *padding-right: 1em;
+}
+
+.sf-arrows .sf-with-ul:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  margin-top: -3px;
+  height: 0;
+  width: 0;
+  border: 5px solid transparent;
+  border-top-color: #ccc;
+}
+
+.sf-arrows > li > .sf-with-ul:focus:after,
+.sf-arrows > li:hover > .sf-with-ul:after,
+.sf-arrows > .sfHover > .sf-with-ul:after {
+  border-top-color: #ccc;
+}
+
+.sf-arrows ul .sf-with-ul:after {
+  margin-top: -5px;
+  margin-right: -3px;
+  border-color: transparent;
+  border-left-color: #ccc;
+}
+
+.sf-arrows ul li > .sf-with-ul:focus:after,
+.sf-arrows ul li:hover > .sf-with-ul:after,
+.sf-arrows ul .sfHover > .sf-with-ul:after {
+  border-left-color: #ccc;
+}
+
+#ticktravel-header-section {
+  padding: 0;
+  position: relative;
+  left: 0;
+  width: 100%;
+  z-index: 1022;
+  background: #fff;
+}
+
+.nav-header {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+#ticktravel-logo {
+  position: relative;
+  z-index: 2;
+  font-size: 28px;
+  text-transform: uppercase;
+  margin-top: 35px;
+  font-weight: 700;
+  float: left;
+  padding-left: 40px;
+}
+#ticktravel-logo i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  color: #2277e0;
+  background: rgba(0, 0, 0, 0.06);
+  padding: 10px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+#ticktravel-logo a {
+  color: #2277e0;
+}
+#ticktravel-logo a:hover, #ticktravel-logo a:focus {
+  color: #2277e0 !important;
+}
+
+#ticktravel-menu-wrap {
+  position: relative;
+  z-index: 2;
+  display: block;
+  float: right;
+  margin-top: 15px;
+}
+#ticktravel-menu-wrap .sf-menu a {
+  padding: 1em .75em;
+}
+
+#ticktravel-primary-menu > li > ul li.active > a {
+  color: #2277e0 !important;
+}
+#ticktravel-primary-menu > li > .sf-with-ul:after {
+  border: none !important;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  float: right;
+  margin-right: -0px;
+  top: 50%;
+  font-size: 12px;
+  margin-top: -7px;
+  content: "\e922";
+  color: rgba(0, 0, 0, 0.5);
+}
+#ticktravel-primary-menu > li > ul li {
+  position: relative;
+}
+#ticktravel-primary-menu > li > ul li > .sf-with-ul:after {
+  border: none !important;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  float: right;
+  margin-right: 10px;
+  top: 20px;
+  font-size: 12px;
+  content: "\e924";
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#ticktravel-primary-menu .ticktravel-sub-menu {
+  padding: 10px 7px 10px;
+  background: #fff;
+  left: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  -ms-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  -o-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+#ticktravel-primary-menu .ticktravel-sub-menu > li > .ticktravel-sub-menu {
+  left: 100%;
+}
+
+#ticktravel-primary-menu .ticktravel-sub-menu:before {
+  position: absolute;
+  top: -9px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  content: '';
+}
+
+#ticktravel-primary-menu .ticktravel-sub-menu:after {
+  position: absolute;
+  top: -8px;
+  left: 21px;
+  width: 0;
+  height: 0;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #fff;
+  border-bottom: 8px solid white;
+  border-left: 8px solid transparent;
+  content: '';
+}
+
+#ticktravel-primary-menu .ticktravel-sub-menu .ticktravel-sub-menu:before {
+  top: 6px;
+  left: 100%;
+}
+
+#ticktravel-primary-menu .ticktravel-sub-menu .ticktravel-sub-menu:after {
+  top: 7px;
+  right: 100%;
+  border: none !important;
+}
+
+.site-header.has-image #primary-menu .sub-menu {
+  border-color: #ebebeb;
+  -webkit-box-shadow: 0 5px 15px 4px rgba(0, 0, 0, 0.09);
+  -moz-box-shadow: 0 5px 15px 4px rgba(0, 0, 0, 0.09);
+  -ms-box-shadow: 0 5px 15px 4px rgba(0, 0, 0, 0.09);
+  -o-box-shadow: 0 5px 15px 4px rgba(0, 0, 0, 0.09);
+  box-shadow: 0 5px 15px 4px rgba(0, 0, 0, 0.09);
+}
+.site-header.has-image #primary-menu .sub-menu:before {
+  display: none;
+}
+
+#ticktravel-primary-menu .ticktravel-sub-menu a {
+  letter-spacing: 0;
+  padding: 0 15px;
+  font-size: 18px;
+  line-height: 34px;
+  color: #575757 !important;
+  text-transform: none;
+  background: none;
+}
+#ticktravel-primary-menu .ticktravel-sub-menu a:hover {
+  color: #2277e0 !important;
+}
+
+.tabulation {
+  width: 100%;
+  float: left;
+  margin-top: -7em;
+  background: rgba(255, 255, 255, 0.95);
+  -webkit-box-shadow: 0px 43px 83px -20px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: 0px 43px 83px -20px rgba(0, 0, 0, 0.41);
+  -ms-box-shadow: 0px 43px 83px -20px rgba(0, 0, 0, 0.41);
+  -o-box-shadow: 0px 43px 83px -20px rgba(0, 0, 0, 0.41);
+  box-shadow: 0px 43px 83px -20px rgba(0, 0, 0, 0.41);
+}
+.tabulation label {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+}
+@media screen and (max-width: 480px) {
+  .tabulation label {
+    width: 40%;
+  }
+}
+.tabulation input[type="text"] {
+  background: rgba(0, 0, 0, 0.05);
+  border: none;
+  box-shadow: none;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 5px 10px !important;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  color: #2277e0 !important;
+}
+.tabulation input[type="text"]::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #2277e0 !important;
+}
+.tabulation input[type="text"]::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #2277e0 !important;
+}
+.tabulation input[type="text"]:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #2277e0 !important;
+}
+.tabulation input[type="text"]:-moz-placeholder {
+  /* Firefox 18- */
+  color: #2277e0 !important;
+}
+@media screen and (max-width: 480px) {
+  .tabulation input[type="text"] {
+    width: 55%;
+    float: right;
+  }
+}
+@media screen and (max-width: 480px) {
+  .tabulation .cs-select {
+    width: 55%;
+    float: right;
+  }
+}
+
+.tab-content {
+  padding: 30px;
+}
+.tab-content .btn {
+  border: 1px solid red !important;
+}
+
+.nav-tabs {
+  border: none;
+}
+.nav-tabs a {
+  border: none !important;
+  font-weight: bold;
+  padding: 15px 20px !important;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+}
+@media screen and (max-width: 768px) {
+  .nav-tabs a {
     font-weight: normal;
-    color:#dedede;
-    padding: 0em 0.5em 0em 2em;
+    font-size: 13px;
+    padding: 15px 10px !important;
+  }
 }
-.checkbox i {
-    position: absolute;
-    bottom: 1px;
-    left: 2px;
-    display: block;
-    width: 18px;
-    height: 18px;
-    outline: none;
-    background: #fff;
-    border: 1px solid #6A67CE;
+.nav-tabs .active a {
+  border: none !important;
+  background: #2277e0 !important;
+  color: #fff !important;
+  font-weight: bold;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
 }
-.checkbox i {
-    font-size: 20px;
-    font-weight: 400;
-    color: #999;
-    font-style: normal;
+.nav-tabs:hover a, .nav-tabs:focus a {
+  border: none !important;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
 }
-.checkbox input:checked + i:after {
-    opacity: 1;
+
+.mt {
+  margin-bottom: 20px;
 }
-.checkbox input + i:after {
-    position: absolute;
+
+div.cs-select span {
+  padding: 10px 10px;
+}
+
+.cs-skin-border {
+  font-size: 16px;
+  color: #999;
+}
+@media screen and (max-width: 829px) {
+  .cs-skin-border {
+    max-width: 829px !important;
+  }
+}
+@media screen and (max-width: 30em) {
+  .cs-skin-border {
+    font-size: 16px;
+  }
+}
+.cs-skin-border span {
+  font-size: 13px;
+}
+.cs-skin-border span:hover {
+  background: rgba(0, 0, 0, 0.05) !important;
+}
+.cs-skin-border > span {
+  border: transparent;
+  background: rgba(0, 0, 0, 0.05);
+  color: #2277e0;
+}
+.cs-skin-border > span::after {
+  font-size: 14px !important;
+  content: '\e94d' !important;
+  font-family: "icomoon";
+}
+.cs-skin-border .cs-selected > span::after {
+  font-size: 14px !important;
+}
+
+.cs-skin-border.cs-active > span {
+  background: rgba(0, 0, 0, 0.05) !important;
+  color: #2277e0;
+}
+
+.cs-select .cs-options {
+  -webkit-box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.18);
+  -moz-box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.18);
+  -ms-box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.18);
+  -o-box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.18);
+  box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.18);
+}
+
+#ticktravel-work-section,
+#ticktravel-car,
+#ticktravel-blog-section,
+#ticktravel-features,
+#ticktravel-tours,
+#ticktravel-testimonial,
+.ticktravel-content-section {
+  padding: 7em 0;
+}
+@media screen and (max-width: 768px) {
+  #ticktravel-work-section,
+  #ticktravel-car,
+  #ticktravel-blog-section,
+  #ticktravel-features,
+  #ticktravel-tours,
+  #ticktravel-testimonial,
+  .ticktravel-content-section {
+    padding: 4em 0;
+  }
+}
+
+.ticktravel-section-gray {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.heading-section {
+  padding-bottom: 1em;
+  margin-bottom: 5em;
+}
+.heading-section:after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 50%;
+  width: 100px;
+  margin-left: -50px;
+  height: 2px;
+  background: #2277e0;
+}
+.heading-section h3 {
+  font-size: 40px;
+  font-weight: 400;
+  position: relative;
+}
+.heading-section p {
+  font-size: 20px;
+}
+
+.heading-title {
+  font-size: 40px;
+  margin-bottom: 1.5em;
+}
+
+.ticktravel-tours {
+  margin-bottom: 30px;
+}
+.ticktravel-tours > div {
+  display: block;
+  color: #000;
+  position: relative;
+  bottom: 0;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.ticktravel-tours > div img {
+  position: relative;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.ticktravel-tours > div:after {
+  opacity: 1;
+  visibility: visible;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 8;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.ticktravel-tours > div .desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px;
+  z-index: 12;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.ticktravel-tours > div .desc h3 {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  opacity: 1;
+  font-size: 30px;
+  font-weight: 400;
+  visibility: visible;
+  margin-bottom: 5px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.ticktravel-tours > div .desc span {
+  display: block;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 5px;
+}
+.ticktravel-tours > div .desc .price {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.ticktravel-tours > div .desc .btn {
+  opacity: 1;
+  /*border: 2px solid #fff !important;*/
+  color: #fff !important;
+  letter-spacing: 1px !important;
+  font-weight: 400 !important;
+}
+.ticktravel-tours > div .desc .btn:hover, .ticktravel-tours > div .desc .btn:focus, .ticktravel-tours > div .desc .btn:active {
+  border: 2px solid #2277e0 !important;
+  background: #2277e0 !important;
+  color: #fff !important;
+}
+.ticktravel-tours > div:hover {
+  -webkit-box-shadow: 0px 18px 71px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 18px 71px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 18px 71px -10px rgba(0, 0, 0, 0.75);
+}
+.ticktravel-tours > div:hover:after {
+  opacity: 1;
+  visibility: visible;
+  -webkit-box-shadow: inset 0px -34px 98px 8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px -34px 98px 8px rgba(0, 0, 0, 0.75);
+  -ms-box-shadow: inset 0px -34px 98px 8px rgba(0, 0, 0, 0.75);
+  -o-box-shadow: inset 0px -34px 98px 8px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px -34px 98px 8px rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 768px) {
+  .ticktravel-tours > div:hover:after {
     opacity: 0;
-    transition: opacity 0.1s;
-    -o-transition: opacity 0.1s;
-    -ms-transition: opacity 0.1s;
-    -moz-transition: opacity 0.1s;
-    -webkit-transition: opacity 0.1s;
+    visibility: hidden;
+  }
 }
-.checkbox input + i:after {
-    content: '';
-    background: url("../images/tick.png") no-repeat 5px 5px;
-    top: -1px;
-    left: -1px;
-    width: 15px;
-    height: 15px;
-    font: normal 12px/16px FontAwesome;
-    text-align: center;
+.ticktravel-tours > div:hover img {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
 }
-input[type="checkbox"]{
-	opacity:0;
-	margin:0;
-	display:none;
+@media screen and (max-width: 768px) {
+  .ticktravel-tours > div:hover img {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
 }
 
-.quantity-select .entry.value-minus {
+.flight-book {
+  width: 100%;
+  float: left;
+  margin-bottom: 1px;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.flight-book .plane-name {
+  width: 40%;
+  float: left;
+  padding: 6px 20px;
+  background: #2277e0;
+}
+.flight-book .plane-name .p-flight {
+  font-size: 18px;
+  color: #fff;
+}
+.flight-book .desc {
+  width: 60%;
+  float: right;
+  background: #00AD7C;
+  padding: 6px 20px;
+}
+.flight-book .desc .left {
+  float: left;
+}
+.flight-book .desc h4, .flight-book .desc span {
+  color: #fff;
+}
+.flight-book .desc h4 {
+  margin-bottom: 0;
+}
+.flight-book .desc .right {
+  float: right;
+  font-size: 25px;
+}
+.flight-book .desc .right i {
+  font-weight: 300;
+}
+.flight-book .desc .right .price {
+  font-weight: 400;
+}
+
+#ticktravel-car .car {
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  float: left;
+  margin-bottom: 30px;
+}
+#ticktravel-car .car .one-4 {
+  width: 40%;
+  float: left;
+  background: #2277e0;
+  padding: 30px;
+}
+#ticktravel-car .car .one-4 h3, #ticktravel-car .car .one-4 span {
+  color: #fff;
+}
+#ticktravel-car .car .one-4 span {
+  display: block;
+  font-weight: 400;
+  font-size: 20px;
+}
+#ticktravel-car .car .one-4 small {
+  font-size: 14px;
+}
+#ticktravel-car .car .one-1 {
+  width: 60%;
+  float: right;
+  height: auto;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.feature-left {
+  float: left;
+  width: 100%;
+  margin-bottom: 40px;
+  position: relative;
+}
+.feature-left .icon {
+  float: left;
+  text-align: center;
+  width: 15%;
+}
+@media screen and (max-width: 992px) {
+  .feature-left .icon {
+    width: 10%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .feature-left .icon {
+    width: 15%;
+  }
+}
+.feature-left .icon i {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 40px;
+  color: #2277e0;
+}
+.feature-left .feature-copy {
+  float: right;
+  width: 80%;
+}
+@media screen and (max-width: 992px) {
+  .feature-left .feature-copy {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .feature-left .feature-copy {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .feature-left .feature-copy {
+    width: 80%;
+  }
+}
+.feature-left .feature-copy h3 {
+  font-size: 18px;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+.feature-left .feature-copy p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+#ticktravel-destination {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#ticktravel-destination-list {
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  position: relative;
+  float: left;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100%;
+}
+#ticktravel-destination-list li {
+  display: table;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  min-height: 220px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  float: left;
+  clear: left;
+  position: relative;
+}
+@media screen and (max-width: 480px) {
+  #ticktravel-destination-list li {
     margin-left: 0;
+  }
 }
-.value-minus, .value-plus {
-    height: 40px;
-    line-height: 24px;
-    width: 40px;
-    margin-right: 3px;
-    display: inline-block;
-    cursor: pointer;
-    position: relative;
-    font-size: 18px;
-    color: #fff;
-    text-align: center;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    border: 1px solid #b2b2b2;
-    vertical-align: bottom;
+#ticktravel-destination-list li .title-bg {
+  min-height: 220px;
+  padding: 2em;
+  position: relative;
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  background: #00AD7C;
+  z-index: 12;
+}
+#ticktravel-destination-list li .title-bg h2 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+#ticktravel-destination-list li .title-bg span {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+#ticktravel-destination-list li .title-bg span a {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  border: 1px solid #fff;
+  padding: 5px 7px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+}
+@media screen and (max-width: 768px) {
+  #ticktravel-destination-list li .title-bg h2 {
+    font-size: 24px;
+  }
+}
+#ticktravel-destination-list li:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 8;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+#ticktravel-destination-list li > a {
+  min-height: 220px;
+  padding: 2em;
+  position: relative;
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  z-index: 12;
+}
+#ticktravel-destination-list li > a:after {
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  content: "";
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+#ticktravel-destination-list li > a .case-studies-summary {
+  width: auto;
+}
+@media screen and (max-width: 768px) {
+  #ticktravel-destination-list li > a .case-studies-summary {
+    bottom: 1em;
+    left: 1em;
+    right: 1em;
+  }
+}
+#ticktravel-destination-list li > a .case-studies-summary span {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+}
+#ticktravel-destination-list li > a .case-studies-summary h2 {
+  color: #fff;
+  margin-bottom: 0;
+  font-size: 24px;
+  font-weight: 400;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+}
+@media screen and (max-width: 768px) {
+  #ticktravel-destination-list li > a .case-studies-summary h2 {
+    font-size: 24px;
+  }
+}
+#ticktravel-destination-list li:hover:after {
+  -webkit-box-shadow: inset 0px 0px 91px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px 0px 91px 0px rgba(0, 0, 0, 0.75);
+  -ms-box-shadow: inset 0px 0px 91px 0px rgba(0, 0, 0, 0.75);
+  -o-box-shadow: inset 0px 0px 91px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px 0px 91px 0px rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.3);
+}
+#ticktravel-destination-list li:hover > a:after {
+  opacity: 1;
+}
+#ticktravel-destination-list li:hover > a .case-studies-summary h2 {
+  margin-top: -5px;
+}
+#ticktravel-destination-list li.two-third {
+  width: 65.6%;
+}
+@media screen and (max-width: 768px) {
+  #ticktravel-destination-list li.two-third {
+    width: 49%;
+  }
+}
+@media screen and (max-width: 480px) {
+  #ticktravel-destination-list li.two-third {
+    width: 100%;
+  }
+}
+#ticktravel-destination-list li.one-third {
+  width: 32.3%;
+}
+@media screen and (max-width: 768px) {
+  #ticktravel-destination-list li.one-third {
+    width: 49%;
+  }
+}
+@media screen and (max-width: 480px) {
+  #ticktravel-destination-list li.one-third {
+    width: 100%;
+  }
+}
+#ticktravel-destination-list li.one-forth {
+  width: 25%;
+}
+@media screen and (max-width: 768px) {
+  #ticktravel-destination-list li.one-forth {
+    width: 49%;
+  }
+}
+@media screen and (max-width: 480px) {
+  #ticktravel-destination-list li.one-forth {
+    width: 100%;
+  }
+}
+#ticktravel-destination-list li.one-half {
+  width: 50%;
+}
+@media screen and (max-width: 480px) {
+  #ticktravel-destination-list li.one-half {
+    width: 100%;
+  }
 }
 
-.value {
-    cursor: default;
-    width: 40px;
-    height:33px;
-    color: #000;
-    line-height: 24px;
-    border: 1px solid #E5E5E5;
-    background-color: #fff;
-    text-align: center;
-    display: inline-block;
-    margin-right: 3px;
-	padding-top:7px;
+#ticktravel-testimonial {
+  position: relative;
+  background: #265279;
+}
+#ticktravel-testimonial .ticktravel-heading h2 {
+  color: white;
+}
+#ticktravel-testimonial .box-testimony {
+  margin-bottom: 2em;
+  float: left;
+}
+#ticktravel-testimonial .box-testimony a {
+  color: rgba(255, 255, 255, 0.5);
+}
+#ticktravel-testimonial .box-testimony a:hover, #ticktravel-testimonial .box-testimony a:focus, #ticktravel-testimonial .box-testimony a:active {
+  color: white;
+  text-decoration: none;
+}
+#ticktravel-testimonial .box-testimony blockquote {
+  padding-left: 0;
+  border-left: none;
+  padding: 40px;
+  background: #fff;
+  position: relative;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+}
+#ticktravel-testimonial .box-testimony blockquote:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 40px;
+  border-top: 15px solid black;
+  border-top-color: #fff;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+}
+#ticktravel-testimonial .box-testimony blockquote .quote {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 0;
+  display: table;
+  color: #fff;
+  width: 56px;
+  height: 56px;
+  margin-top: -30px;
+  background: #00AD7C;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+#ticktravel-testimonial .box-testimony blockquote .quote > span {
+  display: table-cell;
+  vertical-align: middle;
+}
+#ticktravel-testimonial .box-testimony blockquote p {
+  letter-spacing: 1px;
+}
+#ticktravel-testimonial .box-testimony .author {
+  line-height: 20px;
+  color: white;
+  font-size: 20px;
+  margin-left: 20px;
+}
+#ticktravel-testimonial .box-testimony .author .subtext {
+  display: block;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
 }
 
-.quantity-select .entry.value-minus:hover, .quantity-select .entry.value-plus:hover {
-    background: #E5E5E5;
+#ticktravel-features {
+  padding: 7em 0;
 }
-.value-minus, .value-plus {
-    height: 40px;
-    line-height: 24px;
-    width: 40px;
-    margin-right: 3px;
-    display: inline-block;
-    cursor: pointer;
-    position: relative;
-    font-size: 18px;
-    color: #fff;
-    text-align: center;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    border: 1px solid #b2b2b2;
-    vertical-align: bottom;
+#ticktravel-features .feature-left {
+  margin-bottom: 40px;
 }
-.quantity-select .entry.value-minus:before, .quantity-select .entry.value-plus:before {
-    content: "";
-    width: 13px;
-    height: 2px;
-    background: #000;
-    left: 50%;
-    margin-left: -7px;
-    top: 50%;
-    margin-top: -0.5px;
-    position: absolute;
+@media screen and (max-width: 992px) {
+  #ticktravel-features .feature-left {
+    margin-bottom: 30px;
+  }
 }
-.quantity-select .entry.value-plus:after {
-    content: "";
-    height: 13px;
-    width: 2px;
-    background: #000;
-    left: 50%;
-    margin-left: -1.4px;
-    top: 50%;
-    margin-top: -6.2px;
-    position: absolute;
+#ticktravel-features .feature-left .icon i {
+  color: #d9d9d9 !important;
 }
-
-.numofppl,.adults,.child{
-	width:50%;
-	float:left;
+#ticktravel-features .feature-left .icon {
+  float: left;
+  text-align: center;
+  width: 15%;
 }
-.class{
-	width:48%;
-	float:left;
+@media screen and (max-width: 992px) {
+  #ticktravel-features .feature-left .icon {
+    width: 10%;
+  }
 }
-input[type="submit"] {
-    font-size: 14px;
-    color: #fff;
-    background:#ffc107;
-    border: none;
-    outline: none;
-    padding: 10px 20px;
-    margin-top: 50px;
-	cursor:pointer;
-	 transition: 0.5s all ease;
-    -webkit-transition: 0.5s all ease;
-    -moz-transition: 0.5s all ease;
-    -o-transition: 0.5s all ease;
-    -ms-transition: 0.5s all ease;
+@media screen and (max-width: 768px) {
+  #ticktravel-features .feature-left .icon {
+    width: 15%;
+  }
 }
-input[type="submit"]:hover  {
-    background:#212121;
-	color:#fff;
+#ticktravel-features .feature-left .feature-copy {
+  float: right;
+  width: 80%;
 }
-/*-- load-more --*/
-ul#myList{
-	margin-bottom:2em;
+@media screen and (max-width: 992px) {
+  #ticktravel-features .feature-left .feature-copy {
+    width: 90%;
+  }
 }
-#myList li{ 
-	display:none;
-	list-style-type:none;
+@media screen and (max-width: 768px) {
+  #ticktravel-features .feature-left .feature-copy {
+    width: 85%;
+  }
 }
-#loadMore,#showLess {
-	display: inline-block;
-    cursor: pointer;
-    padding: 7px 20px;
-    background: #fff;
-    font-size: 14px;
-    color: #fff;
-    transition: 0.5s all ease;
-    -webkit-transition: 0.5s all ease;
-    -moz-transition: 0.5s all ease;
-    -o-transition: 0.5s all ease;
-    -ms-transition: 0.5s all ease;
-    background: #00bcd4
+@media screen and (max-width: 480px) {
+  #ticktravel-features .feature-left .feature-copy {
+    width: 80%;
+  }
 }
-#loadMore:hover  {
-    background:#212121;
-	color:#fff;
+#ticktravel-features .feature-left h3 {
+  font-size: 16px;
+  font-weight: 700;
 }
-.spcl{
-	position:relative;
+#ticktravel-features .feature-left p {
+  font-size: 15px;
+}
+#ticktravel-features .feature-left p:last-child {
+  margin-bottom: 0;
 }
 
-form.blackbg{
-	background:rgba(33, 150, 243, 0.58);
+#ticktravel-services,
+#ticktravel-about,
+#ticktravel-contact {
+  padding: 7em 0;
 }
-/*-- //load-more --*/
-.footer-w3l {
-    margin: 50px 0 15px 0;
+@media screen and (max-width: 768px) {
+  #ticktravel-services,
+  #ticktravel-about,
+  #ticktravel-contact {
+    padding: 4em 0;
+  }
 }
-.footer-w3l p{
-	font-size:14px;
-	text-align:center;
-	color:#000;
-	line-height:27px;
+
+#ticktravel-services .ticktravel-number {
+  font-size: 30px;
+  color: #2277e0;
+  position: relative;
+  padding-top: 10px;
+  font-style: italic;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
 }
-.footer-w3l p a{
-	color:#000;
+#ticktravel-services .ticktravel-number:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 3px;
+  top: 0;
+  left: 0;
+  background: #2277e0;
 }
-.footer-w3l p a:hover{
-	text-decoration:underline;
+#ticktravel-services .ticktravel-icon {
+  margin-bottom: 30px;
+  margin-top: 50px;
+  position: relative;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
 }
-/*-- responsive --*/
- @media (max-width:1440px){
-	.checkbox {
-		font-size: 0.9em;
-	}
+@media screen and (max-width: 768px) {
+  #ticktravel-services .ticktravel-icon {
+    margin-top: 0px;
+    float: none;
+  }
 }
- @media (max-width:1366px){
-	.main-agileinfo {
-		width: 53%;
-	}
+#ticktravel-services .ticktravel-icon i {
+  font-size: 200px;
+  color: #2277e0;
 }
- @media (max-width:1280px){
-	.main-agileinfo {
-		width: 57%;
-	}
+@media screen and (max-width: 768px) {
+  #ticktravel-services .ticktravel-icon i {
+    font-size: 100px;
+  }
 }
- @media (max-width:1080px){
-	h1 {
-		color: #fff;
-		font-size: 47px;
-	}
-	.main-agileinfo {
-		width: 68%;
-	}
+
+#ticktravel-contact .contact-info {
+  margin: 0;
+  padding: 0;
 }
- @media (max-width:1024px){
-	.main-agileinfo {
-		width: 71%;
-	}
+#ticktravel-contact .contact-info li {
+  list-style: none;
+  margin: 0 0 20px 0;
+  position: relative;
+  padding-left: 40px;
 }
- @media (max-width:991px){
-	.from, .to, .date, .depart, .return {
-		width: 49%;
-		float: left;
-	}
-	.from, .date, .depart {
-		margin-right: 2%;
-	}
+#ticktravel-contact .contact-info li i {
+  position: absolute;
+  top: .3em;
+  left: 0;
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.3);
 }
- @media (max-width:966px){
-	.main-agileinfo {
-		width: 73%;
-	}
-	
+#ticktravel-contact .contact-info li a {
+  font-weight: 400 !important;
+  color: rgba(0, 0, 0, 0.3);
 }
- @media (max-width:900px){
-	.checkbox {
-		font-size: 0.82em;
-	}
+#ticktravel-contact .form-control {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  font-weight: 400;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  border-radius: 0px;
 }
- @media (max-width:800px){
-	.main-agileinfo {
-		width: 81%;
-	}
+#ticktravel-contact .form-control:focus, #ticktravel-contact .form-control:active {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
- @media (max-width:768px){
-	.main-agileinfo {
-		width: 85%;
-	}
-	.checkbox i {
-		width: 15px;
-		height: 15px;
-	}
-	.checkbox input + i:after {
-		top: -3px;
-		left: -3px;
-	}
+#ticktravel-contact input[type="text"] {
+  height: 50px;
 }
- @media (max-width:736px){
-	.main-agileinfo {
-		width: 88%;
-		margin:40px auto;
-	}
-	h1 {
-		color: #fff;
-		font-size: 43px;
-		margin-top:40px;
-	}
-	input[type="text"] {
-		padding: 10px;
-		width: 90%;
-		float: left;
-	}
-	input#datepicker, input#datepicker1, input#datepicker2, input#datepicker3 {
-		width: 79%;
-	}
-	.value-minus, .value-plus {
-		height: 30px;
-		width: 30px;
-	}
-	.value {
-		width: 33px;
-		height: 25px;
-		padding-top: 6px;
-	}
+#ticktravel-contact .form-group {
+  margin-bottom: 30px;
 }
- @media (max-width:667px){
-	.numofppl {
-		width: 60%;
-	}
-	.roundtrip .date {
-		width: 68%;
-		float:left;
-	}
-	.roundtrip .class{
-		width:30%;
-		float:left;
-	}
-	.oneway .depart,.multicity .depart{
-		width: 68%;
-	}
+
+.ticktravel-testimonial, .ticktravel-team {
+  position: relative;
+  background: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  margin-bottom: 30px;
 }
- @media (max-width:600px){
-	select#w3_country1 {
-		width: 100%;
-	}
+@media screen and (max-width: 768px) {
+  .ticktravel-testimonial, .ticktravel-team {
+    border-right: 0;
+    margin-bottom: 80px;
+  }
 }
- @media (max-width:568px){
-	h1 {
-		font-size: 40px;
-	}
-	.resp-tab-item {
-		padding: 7px 13px;
-		margin: 0 1em 0;
-	}
-	.numofppl {
-		width: 70%;
-	}
+.ticktravel-testimonial h2, .ticktravel-team h2 {
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 50px;
 }
- @media (max-width:480px){
-	.resp-tab-item {
-		padding: 7px 7px;
-		margin: 0 0.7em 0;
-	}
-	 input[type="text"] {
-		padding: 10px;
-		width: 86%;
-		float: left;
-	}
-	.roundtrip .date {
-		width: 100%;
-		float: left;
-	}
-	input#datepicker, input#datepicker1, input#datepicker2, input#datepicker3 {
-		width: 86%;
-	}
-	.roundtrip .class{
-		width: 100%;
-		float: left;
-		margin-bottom:40px;
-	}
-	.numofppl {
-		width: 80%;
-	}
-	.oneway .depart, .multicity .depart {
-		width: 100%;
-	}
+.ticktravel-testimonial figure, .ticktravel-team figure {
+  position: relative;
+  top: 0px;
+  background-size: cover;
+  margin-bottom: 20px;
 }
- @media (max-width:414px){
-	h1 {
-		font-size: 35px;
-		margin-top:30px;
-	}
-	.resp-tab-item {
-		padding: 7px 7px;
-		margin: 0 0.5em 0;
-		font-size: 15px;
-	}
-	.numofppl {
-		width: 100%;
-	}
+.ticktravel-testimonial figure img, .ticktravel-team figure img {
+  width: 130px;
+  height: 130px;
+  border: 10px solid #fff;
+  background-size: cover;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
 }
- @media (max-width:384px){
-	h1 {
-		font-size: 32px;
-	}
-	h3 {
-		font-size: 15px;
-	}
-	.from, .to, .date, .depart, .return {
-		width: 100%;
-		float: left;
-		margin-bottom:25px;
-	}
-	.date{
-		margin-bottom:0;
-	}
-	.resp-tab-item {
-		padding: 7px 7px;
-		margin: 0 0em 0;
-		font-size: 15px;
-	}
-	.class {
-		width: 100%;
-		float: left;
-		margin-bottom: 40px;
-	}
-	input[type="text"] {
-		padding: 10px;
-		width: 91.5%;
-	}
-	input#datepicker, input#datepicker1, input#datepicker2, input#datepicker3 {
-		width: 91.5%;
-	}
+.ticktravel-testimonial > div, .ticktravel-team > div {
+  padding: 30px 30px 0 30px;
 }
- @media (max-width:320px){
-	h1 {
-		font-size: 26px;
-		margin-top:25px;
-	}
-	form{
-		padding:15px;
-	}
-	.resp-tab-item {
-		padding: 7px 5px;
-		margin: 0 0em 0;
-		font-size: 14px;
-	}
-	.adults, .child {
-		width: 100%;
-		float: left;
-	}
-	.adults{
-		margin-bottom:25px;
-	}
+.ticktravel-testimonial > div h3, .ticktravel-team > div h3 {
+  margin-bottom: 0;
+  font-size: 20px;
+  color: #2277e0;
 }
-/*-- //responsive--*/
+.ticktravel-testimonial > div .position, .ticktravel-team > div .position {
+  color: #d9d9d9;
+  margin-bottom: 30px;
+}
+.ticktravel-testimonial > div,
+.ticktravel-testimonial blockquote, .ticktravel-team > div,
+.ticktravel-team blockquote {
+  border: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.ticktravel-testimonial > div p,
+.ticktravel-testimonial blockquote p, .ticktravel-team > div p,
+.ticktravel-team blockquote p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555555;
+}
+.ticktravel-testimonial span, .ticktravel-team span {
+  font-style: italic;
+  color: #b3b3b3;
+}
+
+.ticktravel-testimonial p .text-mute {
+  color: #ccc !important;
+}
+
+.ticktravel-blog {
+  margin-bottom: 60px;
+}
+.ticktravel-blog a img {
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .ticktravel-blog {
+    width: 100%;
+  }
+}
+.ticktravel-blog .blog-text {
+  margin-bottom: 30px;
+  position: relative;
+  background: #fff;
+  width: 100%;
+  padding: 30px;
+  float: right;
+  -webkit-box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.18);
+  -moz-box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.18);
+  box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.18);
+}
+.ticktravel-blog .blog-text span {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.ticktravel-blog .blog-text span.posted_by {
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 18px;
+}
+.ticktravel-blog .blog-text span.comment {
+  float: right;
+}
+.ticktravel-blog .blog-text span.comment a {
+  color: rgba(0, 0, 0, 0.3);
+}
+.ticktravel-blog .blog-text span.comment a i {
+  color: #2277e0;
+  padding-left: 7px;
+}
+.ticktravel-blog .blog-text h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.ticktravel-blog .blog-text h3 a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#ticktravel-start-project-section {
+  padding: 7em 0;
+  background: #F64E8B;
+}
+#ticktravel-start-project-section h2 {
+  color: white;
+  font-size: 60px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+@media screen and (max-width: 768px) {
+  #ticktravel-start-project-section h2 {
+    font-size: 30px;
+  }
+}
+#ticktravel-start-project-section a:hover, #ticktravel-start-project-section a:focus, #ticktravel-start-project-section a:active {
+  color: white !important;
+}
+
+#map {
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  #map {
+    height: 200px;
+  }
+}
+
+.ticktravel-social-icons > a {
+  padding: 4px 10px;
+  color: #2277e0;
+}
+.ticktravel-social-icons > a i {
+  font-size: 26px;
+}
+.ticktravel-social-icons > a:hover, .ticktravel-social-icons > a:focus, .ticktravel-social-icons > a:active {
+  text-decoration: none;
+  color: #5a5a5a;
+}
+
+#footer {
+  background: #2b2c30;
+  padding: 60px 0 40px;
+}
+#footer p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+#footer p a {
+  color: rgba(255, 255, 255, 0.5);
+}
+#footer p a:hover, #footer p a:active, #footer p a:focus {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+#footer .ticktravel-footer-link {
+  padding-bottom: 30px;
+}
+#footer .ticktravel-footer-link h3 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+#footer .ticktravel-footer-link li, #footer .ticktravel-footer-link ul {
+  padding: 0;
+  margin: 0;
+}
+#footer .ticktravel-footer-link li {
+  list-style: none;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+#footer .ticktravel-footer-link li a {
+  color: rgba(255, 255, 255, 0.5);
+}
+#footer .ticktravel-footer-link li a:hover, #footer .ticktravel-footer-link li a:active, #footer .ticktravel-footer-link li a:focus {
+  color: #fff !important;
+}
+
+.btn {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.btn {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.btn.btn-primary {
+  background: #2277e0;
+  color: #fff;
+  border: none !important;
+  border: 2px solid transparent !important;
+}
+.btn.btn-primary:hover, .btn.btn-primary:active, .btn.btn-primary:focus {
+  box-shadow: none;
+  background: #2277e0;
+  color: #fff !important;
+}
+.btn:hover, .btn:active, .btn:focus {
+  background: #393e46 !important;
+  color: #fff;
+  outline: none !important;
+}
+.btn.btn-default:hover, .btn.btn-default:focus, .btn.btn-default:active {
+  border-color: transparent;
+}
+.btn.btn-outline {
+  background: transparent;
+  color: #2277e0;
+  border: 2px solid #2277e0 !important;
+}
+.btn.btn-outline:hover, .btn.btn-outline:focus, .btn.btn-outline:active {
+  background: #2277e0 !important;
+  color: #fff !important;
+}
+
+.tab-content .btn {
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.js .animate-box {
+  opacity: 0;
+}
+
+#ticktravel-wrapper {
+  overflow-x: hidden;
+  position: relative;
+}
+
+.ticktravel-offcanvas {
+  overflow: hidden;
+}
+.ticktravel-offcanvas #ticktravel-wrapper {
+  overflow: hidden !important;
+}
+
+#ticktravel-page {
+  position: relative;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.ticktravel-offcanvas #ticktravel-page {
+  -moz-transform: translateX(-240px);
+  -webkit-transform: translateX(-240px);
+  -ms-transform: translateX(-240px);
+  -o-transform: translateX(-240px);
+  transform: translateX(-240px);
+}
+
+@media screen and (max-width: 768px) {
+  #ticktravel-menu-wrap {
+    display: none;
+  }
+}
+
+#offcanvas-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 99;
+  background: #222;
+  right: -240px;
+  width: 240px;
+  padding: 20px;
+  overflow-y: scroll !important;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  #offcanvas-menu {
+    display: block;
+  }
+}
+#offcanvas-menu ul {
+  padding: 0;
+  margin: 0;
+}
+#offcanvas-menu ul li {
+  padding: 0;
+  margin: 0 0 10px 0;
+  list-style: none;
+}
+#offcanvas-menu ul li a {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.4);
+}
+#offcanvas-menu ul li a:hover {
+  color: #2277e0;
+}
+#offcanvas-menu ul li > .ticktravel-sub-menu {
+  margin-top: 9px;
+  padding-left: 20px;
+}
+#offcanvas-menu ul li.active > a {
+  color: #2277e0;
+}
+#offcanvas-menu ul .ticktravel-sub-menu {
+  display: block !important;
+}
+
+.ticktravel-nav-toggle {
+  cursor: pointer;
+  text-decoration: none;
+}
+.ticktravel-nav-toggle.active i::before, .ticktravel-nav-toggle.active i::after {
+  background: #fff;
+}
+.ticktravel-nav-toggle.dark.active i::before, .ticktravel-nav-toggle.dark.active i::after {
+  background: #fff;
+}
+.ticktravel-nav-toggle:hover, .ticktravel-nav-toggle:focus, .ticktravel-nav-toggle:active {
+  outline: none;
+  border-bottom: none !important;
+}
+.ticktravel-nav-toggle i {
+  position: relative;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  width: 30px;
+  height: 2px;
+  color: #fff;
+  font: bold 14px/.4 Helvetica;
+  text-transform: uppercase;
+  text-indent: -55px;
+  background: #fff;
+  transition: all .2s ease-out;
+}
+.ticktravel-nav-toggle i::before, .ticktravel-nav-toggle i::after {
+  content: '';
+  width: 30px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+.ticktravel-nav-toggle.dark i {
+  position: relative;
+  color: #000;
+  background: #000;
+  transition: all .2s ease-out;
+}
+.ticktravel-nav-toggle.dark i::before, .ticktravel-nav-toggle.dark i::after {
+  background: #000;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.ticktravel-nav-toggle i::before {
+  top: -7px;
+}
+
+.ticktravel-nav-toggle i::after {
+  bottom: -7px;
+}
+
+.ticktravel-nav-toggle:hover i::before {
+  top: -10px;
+}
+
+.ticktravel-nav-toggle:hover i::after {
+  bottom: -10px;
+}
+
+.ticktravel-nav-toggle.active i {
+  background: transparent;
+}
+
+.ticktravel-nav-toggle.active i::before {
+  top: 0;
+  -webkit-transform: rotateZ(45deg);
+  -moz-transform: rotateZ(45deg);
+  -ms-transform: rotateZ(45deg);
+  -o-transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
+}
+
+.ticktravel-nav-toggle.active i::after {
+  bottom: 0;
+  -webkit-transform: rotateZ(-45deg);
+  -moz-transform: rotateZ(-45deg);
+  -ms-transform: rotateZ(-45deg);
+  -o-transform: rotateZ(-45deg);
+  transform: rotateZ(-45deg);
+}
+
+.ticktravel-nav-toggle {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 9999;
+  display: block;
+  margin: 0 auto;
+  display: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .ticktravel-nav-toggle {
+    display: block;
+    top: 0px;
+    margin-top: 2em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .col-xxs-12 {
+    float: none;
+    width: 100%;
+  }
+}
+
+.row-bottom-padded-lg {
+  padding-bottom: 7em;
+}
+@media screen and (max-width: 768px) {
+  .row-bottom-padded-lg {
+    padding-bottom: 2em;
+  }
+}
+
+.row-top-padded-lg {
+  padding-top: 7em;
+}
+@media screen and (max-width: 768px) {
+  .row-top-padded-lg {
+    padding-top: 2em;
+  }
+}
+
+.row-bottom-padded-md {
+  padding-bottom: 4em;
+}
+@media screen and (max-width: 768px) {
+  .row-bottom-padded-md {
+    padding-bottom: 2em;
+  }
+}
+
+.row-top-padded-md {
+  padding-top: 4em;
+}
+@media screen and (max-width: 768px) {
+  .row-top-padded-md {
+    padding-top: 2em;
+  }
+}
+
+.row-bottom-padded-sm {
+  padding-bottom: 2em;
+}
+@media screen and (max-width: 768px) {
+  .row-bottom-padded-sm {
+    padding-bottom: 2em;
+  }
+}
+
+.row-top-padded-sm {
+  padding-top: 2em;
+}
+@media screen and (max-width: 768px) {
+  .row-top-padded-sm {
+    padding-top: 2em;
+  }
+}
+
+.border-bottom {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.lead {
+  line-height: 1.8;
+}
+
+.no-js #loader {
+  display: none;
+}
+
+.js #loader {
+  display: block;
+  position: absolute;
+  left: 100px;
+  top: 0;
+}
+
+.ticktravel-loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url(../images/hourglass.svg) center no-repeat #222222;
+}
+
+/*# sourceMappingURL=style.css.map */
+
